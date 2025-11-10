@@ -1,13 +1,13 @@
 .services {
-  padding: 1.6rem 4% 3.2rem; /* 2rem * 0.8 = 1.6rem, 5% * 0.8 = 4% */
+  padding: 1.6rem 4% 3.2rem;
   background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 50%, #fff8f5 100%);
   position: relative;
   overflow: hidden;
-  padding-top: 96px; /* 120px * 0.8 = 96px */
-  margin-top: -32px; /* -40px * 0.8 = -32px */
+  padding-top: 96px;
+  margin-top: -32px;
 }
 
-/* Background Elements - reduzidos em 20% */
+/* Background Elements*/
 .section-bg {
   position: absolute;
   top: 0;
@@ -22,7 +22,7 @@
   position: absolute;
   top: -10%;
   right: -5%;
-  width: 240px; /* 300px * 0.8 = 240px */
+  width: 240px;
   height: 240px;
   background: radial-gradient(circle, rgba(232, 184, 109, 0.12) 0%, transparent 60%);
   border-radius: 50%;
@@ -34,7 +34,7 @@
   position: absolute;
   bottom: -10%;
   left: -5%;
-  width: 200px; /* 250px * 0.8 = 200px */
+  width: 200px;
   height: 200px;
   background: radial-gradient(circle, rgba(139, 95, 191, 0.1) 0%, transparent 60%);
   border-radius: 50%;
@@ -45,9 +45,9 @@
 .wave-2 {
   position: absolute;
   width: 120%;
-  height: 96px; /* 120px * 0.8 = 96px */
+  height: 96px;
   background: linear-gradient(90deg, transparent, rgba(139, 95, 191, 0.08), transparent);
-  border-radius: 40px; /* 50px * 0.8 = 40px */
+  border-radius: 40px;
   filter: blur(1px);
 }
 
@@ -67,10 +67,10 @@
 
 .services h2 {
   text-align: center;
-  font-size: 2.4rem; /* 3rem * 0.8 = 2.4rem */
+  font-size: 2.4rem;
   font-weight: 700;
   color: #2d1b4e;
-  margin-bottom: 2.4rem; /* 3rem * 0.8 = 2.4rem */
+  margin-bottom: 2.4rem;
   position: relative;
   z-index: 2;
 }
@@ -85,28 +85,28 @@
 
 .section-subtitle {
   display: block;
-  font-size: 0.96rem; /* 1.2rem * 0.8 = 0.96rem */
+  font-size: 0.96rem;
   font-weight: 400;
   color: #666;
-  margin-top: 0.4rem; /* 0.5rem * 0.8 = 0.4rem */
+  margin-top: 0.4rem;
 }
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* 300px * 0.8 = 240px */
-  gap: 1.6rem; /* 2rem * 0.8 = 1.6rem */
-  max-width: 960px; /* 1200px * 0.8 = 960px */
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.6rem;
+  max-width: 960px;
   margin: 0 auto;
   position: relative;
   z-index: 2;
 }
 
-/* Cards com efeito Wave sincronizado - reduzidos em 20% */
+/* Cards com efeito Wave sincronizado */
 .service-card {
   background: white;
-  padding: 2rem; /* 2.5rem * 0.8 = 2rem */
-  border-radius: 16px; /* 20px * 0.8 = 16px */
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); /* 10px * 0.8 = 8px, 40px * 0.8 = 32px */
+  padding: 0;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: all 0.4s ease;
   border: 1px solid #f0f0f0;
@@ -114,24 +114,52 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  min-height: 280px; /* 350px * 0.8 = 280px */
-  
-  /* Estado inicial - todos os cards começam iguais */
+  min-height: 280px;
   opacity: 0;
-  transform: translateX(-48px) rotate(-3deg); /* -60px * 0.8 = -48px */
+  transform: translateX(-48px) rotate(-3deg);
   filter: brightness(0.7);
+  /* Background image properties */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-/* Estilos para o preço do serviço */
+
+/* Overlay para melhorar legibilidade */
+.service-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(255, 255, 255, 0.85) 50%,
+    rgba(139, 95, 191, 0.1) 100%
+  );
+  z-index: 1;
+}
+
+/* Container para o conteúdo */
+.service-card-content {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .service-price {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0.4rem 0 0.6rem 0;
-  padding: 0; /* Removido o padding */
-  background: none; /* Removido o fundo */
-  border-radius: 0; /* Removido o arredondamento */
-  box-shadow: none; /* Removido a sombra */
-  border: none; /* Removido a borda */
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
   animation: fadeInContent 0.6s;
 }
 
@@ -160,21 +188,21 @@
 }
 
 .service-card:hover {
-  transform: translateY(-6.4px) scale(1.03); /* -8px * 0.8 = -6.4px */
-  box-shadow: 0 20px 40px rgba(139, 95, 191, 0.25); /* 25px * 0.8 = 20px, 50px * 0.8 = 40px */
+  transform: translateY(-6.4px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(139, 95, 191, 0.25);
   border-color: rgba(139, 95, 191, 0.4);
 }
 
 .service-icon {
-  width: 64px; /* 80px * 0.8 = 64px */
+  width: 64px;
   height: 64px;
   background: linear-gradient(135deg, #8B5FBF, #E8B86D);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 1.2rem; /* 1.5rem * 0.8 = 1.2rem */
-  font-size: 1.6rem; /* 2rem * 0.8 = 1.6rem */
+  margin: 0 auto 1.2rem;
+  font-size: 1.6rem;
   transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
@@ -182,21 +210,21 @@
 
 .service-card:hover .service-icon {
   transform: scale(1.1) rotateY(360deg);
-  box-shadow: 0 6.4px 20px rgba(139, 95, 191, 0.3); /* 8px * 0.8 = 6.4px, 25px * 0.8 = 20px */
+  box-shadow: 0 6.4px 20px rgba(139, 95, 191, 0.3);
 }
 
 .service-card h3 {
-  font-size: 1.2rem; /* 1.5rem * 0.8 = 1.2rem */
+  font-size: 1.2rem;
   font-weight: 600;
   color: #2d1b4e;
-  margin-bottom: 0.8rem; /* 1rem * 0.8 = 0.8rem */
+  margin-bottom: 0.8rem;
 }
 
 .service-card p {
   color: #666;
   line-height: 1.6;
-  font-size: 0.88rem; /* aproximadamente 1.1rem * 0.8 = 0.88rem */
-  margin-bottom: 1.2rem; /* 1.5rem * 0.8 = 1.2rem */
+  font-size: 0.88rem;
+  margin-bottom: 1.2rem;
   flex-grow: 1;
 }
 
@@ -204,9 +232,9 @@
   background: linear-gradient(135deg, #8B5FBF, #E8B86D);
   color: white;
   border: none;
-  padding: 0.64rem 1.2rem; /* 0.8rem * 0.8 = 0.64rem, 1.5rem * 0.8 = 1.2rem */
-  border-radius: 20px; /* 25px * 0.8 = 20px */
-  font-size: 0.72rem; /* 0.9rem * 0.8 = 0.72rem */
+  padding: 0.64rem 1.2rem;
+  border-radius: 20px;
+  font-size: 0.72rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -215,8 +243,8 @@
 
 .service-btn:hover {
   background: linear-gradient(135deg, #7A4FA6, #D9A559);
-  transform: translateY(-2.4px); /* -3px * 0.8 = -2.4px */
-  box-shadow: 0 6.4px 16px rgba(139, 95, 191, 0.4); /* 8px * 0.8 = 6.4px, 20px * 0.8 = 16px */
+  transform: translateY(-2.4px);
+  box-shadow: 0 6.4px 16px rgba(139, 95, 191, 0.4);
 }
 
 .card-glow {
@@ -251,12 +279,12 @@
 @keyframes waveSlideInSync {
   0% {
     opacity: 0;
-    transform: translateX(-48px) rotate(-3deg); /* -60px * 0.8 = -48px */
+    transform: translateX(-48px) rotate(-3deg);
     filter: brightness(0.7);
   }
   60% {
     opacity: 0.8;
-    transform: translateX(12px) rotate(1deg); /* 15px * 0.8 = 12px */
+    transform: translateX(12px) rotate(1deg);
     filter: brightness(1.1);
   }
   100% {
@@ -269,31 +297,31 @@
 /* Mobile mantém proporções reduzidas */
 @media (max-width: 768px) {
   .services {
-    padding: 64px 2.4% 2.4rem 2.4%; /* 80px * 0.8 = 64px, 3% * 0.8 = 2.4% */
-    margin-top: -16px; /* -20px * 0.8 = -16px */
+    padding: 64px 2.4% 2.4rem 2.4%;
+    margin-top: -16px;
   }
   
   .services h2 {
-    font-size: 2rem; /* 2.5rem * 0.8 = 2rem */
-    margin-bottom: 1.6rem; /* 2rem * 0.8 = 1.6rem */
+    font-size: 2rem;
+    margin-bottom: 1.6rem;
     color: #2d1b4e;
   }
   
   .section-subtitle {
-    font-size: 0.8rem; /* 1rem * 0.8 = 0.8rem */
+    font-size: 0.8rem;
     color: #666;
   }
   
   .services-grid {
     grid-template-columns: 1fr;
-    gap: 1.2rem; /* 1.5rem * 0.8 = 1.2rem */
-    max-width: 400px; /* 500px * 0.8 = 400px */
+    gap: 1.2rem;
+    max-width: 400px;
   }
   
   .service-card {
-    padding: 1.6rem; /* 2rem * 0.8 = 1.6rem */
-    min-height: 240px; /* 300px * 0.8 = 240px */
-    transform: translateX(-32px) rotate(-2deg); /* -40px * 0.8 = -32px */
+    padding: 1.6rem;
+    min-height: 240px;
+    transform: translateX(-32px) rotate(-2deg);
     background: white;
   }
 
@@ -312,45 +340,90 @@
   }
   
   .service-icon {
-    width: 56px; /* 70px * 0.8 = 56px */
+    width: 56px;
     height: 56px;
-    font-size: 1.44rem; /* 1.8rem * 0.8 = 1.44rem */
+    font-size: 1.44rem;
     background: linear-gradient(135deg, #8B5FBF, #E8B86D);
   }
   
   .service-card h3 {
-    font-size: 1.04rem; /* 1.3rem * 0.8 = 1.04rem */
+    font-size: 1.04rem;
     color: #2d1b4e !important;
     font-weight: 600;
   }
   
   .service-card p {
-    font-size: 0.76rem; /* 0.95rem * 0.8 = 0.76rem */
+    font-size: 0.76rem;
     color: #666 !important;
     line-height: 1.6;
   }
   
   .service-btn {
-    padding: 0.56rem 0.96rem; /* 0.7rem * 0.8 = 0.56rem, 1.2rem * 0.8 = 0.96rem */
-    font-size: 0.68rem; /* 0.85rem * 0.8 = 0.68rem */
+    padding: 0.56rem 0.96rem;
+    font-size: 0.68rem;
     background: linear-gradient(135deg, #8B5FBF, #E8B86D);
     color: white !important;
   }
   
   /* Reduzir elementos de fundo no mobile */
   .section-bg::before {
-    width: 160px; /* 200px * 0.8 = 160px */
+    width: 160px;
     height: 160px;
   }
   
   .section-bg::after {
-    width: 120px; /* 150px * 0.8 = 120px */
+    width: 120px;
     height: 120px;
   }
   
   .wave-1,
   .wave-2 {
-    height: 64px; /* 80px * 0.8 = 64px */
+    height: 64px;
+  }
+  
+  /* Galeria responsiva para mobile */
+  .services-gallery {
+    margin-top: 2.5rem;
+    padding: 1.5rem 0;
+  }
+  
+  .gallery-header h3 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .gallery-title {
+    font-size: 1.6rem;
+  }
+  
+  .gallery-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .gallery-filters {
+    gap: 0.8rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .gallery-filter-btn {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.85rem;
+    width: 200px;
+    justify-content: center;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .gallery-item {
+    border-radius: 8px;
+  }
+  
+  .gallery-icon {
+    font-size: 1.5rem;
   }
 }
 
@@ -358,12 +431,12 @@
 @keyframes waveSlideInSyncMobile {
   0% {
     opacity: 0;
-    transform: translateX(-32px) rotate(-2deg); /* -40px * 0.8 = -32px */
+    transform: translateX(-32px) rotate(-2deg);
     filter: brightness(0.8);
   }
   70% {
     opacity: 0.9;
-    transform: translateX(6.4px) rotate(1deg); /* 8px * 0.8 = 6.4px */
+    transform: translateX(6.4px) rotate(1deg);
     filter: brightness(1.05);
   }
   100% {
@@ -376,23 +449,23 @@
 /* Para telas muito pequenas */
 @media (max-width: 480px) {
   .services {
-    padding: 56px 1.6% 1.6rem 1.6%; /* 70px * 0.8 = 56px, 2% * 0.8 = 1.6% */
+    padding: 56px 1.6% 1.6rem 1.6%;
   }
   
   .services h2 {
-    font-size: 1.6rem; /* 2rem * 0.8 = 1.6rem */
+    font-size: 1.6rem;
     color: #2d1b4e !important;
   }
   
   .section-subtitle {
-    font-size: 0.72rem; /* 0.9rem * 0.8 = 0.72rem */
+    font-size: 0.72rem;
     color: #666 !important;
   }
   
   .service-card {
-    padding: 1.2rem; /* 1.5rem * 0.8 = 1.2rem */
-    border-radius: 12px; /* 15px * 0.8 = 12px */
-    transform: translateX(-20px) rotate(-1deg); /* -25px * 0.8 = -20px */
+    padding: 1.2rem;
+    border-radius: 12px;
+    transform: translateX(-20px) rotate(-1deg);
     background: white !important;
   }
 
@@ -411,26 +484,26 @@
   }
   
   .service-icon {
-    width: 48px; /* 60px * 0.8 = 48px */
+    width: 48px;
     height: 48px;
-    font-size: 1.2rem; /* 1.5rem * 0.8 = 1.2rem */
+    font-size: 1.2rem;
     background: linear-gradient(135deg, #8B5FBF, #E8B86D) !important;
   }
   
   .service-card h3 {
-    font-size: 0.96rem; /* 1.2rem * 0.8 = 0.96rem */
+    font-size: 0.96rem;
     color: #2d1b4e !important;
   }
   
   .service-card p {
-    font-size: 0.72rem; /* 0.9rem * 0.8 = 0.72rem */
+    font-size: 0.72rem;
     color: #666 !important;
     line-height: 1.6;
   }
   
   .service-btn {
-    padding: 0.48rem 0.8rem; /* 0.6rem * 0.8 = 0.48rem, 1rem * 0.8 = 0.8rem */
-    font-size: 0.64rem; /* 0.8rem * 0.8 = 0.64rem */
+    padding: 0.48rem 0.8rem;
+    font-size: 0.64rem;
     background: linear-gradient(135deg, #8B5FBF, #E8B86D) !important;
     color: white !important;
   }
@@ -440,12 +513,12 @@
 @keyframes waveSlideInSyncSmall {
   0% {
     opacity: 0;
-    transform: translateX(-20px) rotate(-1deg); /* -25px * 0.8 = -20px */
+    transform: translateX(-20px) rotate(-1deg);
     filter: brightness(0.8);
   }
   80% {
     opacity: 0.9;
-    transform: translateX(4px) rotate(0.5deg); /* 5px * 0.8 = 4px */
+    transform: translateX(4px) rotate(0.5deg);
     filter: brightness(1.05);
   }
   100% {
@@ -455,14 +528,13 @@
   }
 }
 
-/* Tablet - aplicar redução de 20% */
 @media (max-width: 1024px) and (min-width: 769px) {
   .services {
-    padding: 80px 3.2% 3.2rem 3.2%; /* 100px * 0.8 = 80px, 4% * 0.8 = 3.2% */
+    padding: 80px 3.2% 3.2rem 3.2%;
   }
   
   .services h2 {
-    font-size: 2.24rem; /* 2.8rem * 0.8 = 2.24rem */
+    font-size: 2.24rem;
     color: #2d1b4e;
   }
   
@@ -471,12 +543,12 @@
   }
   
   .services-grid {
-    grid-template-columns: repeat(auto-fit, minmax(224px, 1fr)); /* 280px * 0.8 = 224px */
-    gap: 1.44rem; /* 1.8rem * 0.8 = 1.44rem */
+    grid-template-columns: repeat(auto-fit, minmax(224px, 1fr));
+    gap: 1.44rem;
   }
   
   .service-card {
-    padding: 1.76rem; /* 2.2rem * 0.8 = 1.76rem */
+    padding: 1.76rem;
     background: white;
   }
   
@@ -499,6 +571,615 @@
     transform: translateY(0px) scale(1);
   }
   50% {
-    transform: translateY(-12px) scale(1.02); /* -15px * 0.8 = -12px */
+    transform: translateY(-12px) scale(1.02);
+  }
+}
+
+/* Galeria de Fotos - Todas as Categorias */
+.services-gallery {
+  margin-top: 5rem;
+  padding: 3rem 2rem;
+  position: relative;
+  z-index: 2;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Header Principal da Galeria */
+.gallery-main-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid rgba(139, 95, 191, 0.1);
+}
+
+.gallery-main-header h3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.gallery-main-title {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #8B5FBF, #D4A5D4, #8B5FBF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% auto;
+  animation: shine 3s linear infinite;
+  letter-spacing: -0.5px;
+}
+
+.gallery-main-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* Seção de Categoria */
+.gallery-category-section {
+  margin-bottom: 5rem;
+  width: 100%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallery-category-section:last-child {
+  margin-bottom: 2rem;
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 0;
+  width: 100%;
+}
+
+.category-icon {
+  font-size: 3rem;
+  filter: drop-shadow(0 2px 4px rgba(139, 95, 191, 0.2));
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes categoryFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Desktop grande - melhor controle do layout */
+@media (min-width: 1400px) {
+  .gallery-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1399px) {
+  .gallery-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+.category-text {
+  flex: 1;
+}
+
+.category-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #8B5FBF;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.3px;
+}
+
+.category-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+  font-style: italic;
+}
+
+/* Grid da Galeria */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(220px, 100%), 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Cards menores e mais clean */
+.gallery-item {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f5f5f5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: galleryItemAppear 0.5s ease forwards;
+}
+
+.gallery-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(139, 95, 191, 0.25);
+}
+
+/* Imagem simples e limpa */
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.4s ease;
+}
+
+.gallery-item:hover .gallery-image {
+  transform: scale(1.08);
+  filter: brightness(0.8);
+}
+
+/* Overlay minimalista */
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    180deg, 
+    transparent 0%, 
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+/* Ícone pequeno e discreto */
+.gallery-icon {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 0.5rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease 0.1s;
+}
+
+.gallery-item:hover .gallery-icon {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Caption minimalista */
+.gallery-caption {
+  font-size: 0.85rem;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease 0.15s;
+}
+
+.gallery-item:hover .gallery-caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+/* Animações simples e suaves */
+@keyframes galleryItemAppear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes titleShine {
+  0%, 100% {
+    filter: brightness(1) saturate(1);
+  }
+  50% {
+    filter: brightness(1.2) saturate(1.3);
+  }
+}
+
+/* Responsive - Tablet e Desktop menor */
+@media (max-width: 1024px) {
+  .services-gallery {
+    padding: 2.5rem 1.5rem;
+  }
+  
+  .gallery-main-title {
+    font-size: 2.5rem;
+  }
+  
+  .gallery-main-subtitle {
+    font-size: 1rem;
+  }
+  
+  .category-title {
+    font-size: 1.75rem;
+  }
+  
+  .category-icon {
+    font-size: 2.5rem;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(min(180px, 100%), 1fr));
+    gap: 1.2rem;
+  }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 768px) {
+  .services-gallery {
+    margin-top: 3rem;
+    padding: 2rem 1rem;
+  }
+  
+  .gallery-main-header {
+    margin-bottom: 3rem;
+    padding-bottom: 1.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  .gallery-main-title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  
+  .gallery-main-subtitle {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  
+  .gallery-category-section {
+    margin-bottom: 4rem;
+  }
+  
+  .category-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  
+  .category-icon {
+    font-size: 2.5rem;
+  }
+  
+  .category-title {
+    font-size: 1.5rem;
+  }
+  
+  .category-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(min(140px, 45%), 1fr));
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+  
+  .gallery-item {
+    border-radius: 10px;
+  }
+  
+  .gallery-icon {
+    font-size: 1.5rem;
+  }
+  
+  .gallery-caption {
+    font-size: 0.75rem;
+  }
+  
+  .gallery-overlay {
+    padding: 1rem;
+  }
+}
+
+/* Responsive - Mobile pequeno */
+@media (max-width: 480px) {
+  .services-gallery {
+    padding: 2rem 0.75rem;
+  }
+  
+  .gallery-main-header {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+  
+  .gallery-main-title {
+    font-size: 1.75rem;
+  }
+  
+  .gallery-main-subtitle {
+    font-size: 0.85rem;
+  }
+  
+  .category-header {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+  
+  .category-title {
+    font-size: 1.3rem;
+  }
+  
+  .category-icon {
+    font-size: 2rem;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+    padding: 0 0.25rem;
+  }
+  
+  .gallery-item {
+    border-radius: 8px;
+  }
+}
+
+/* Modal de Imagem em Tela Cheia */
+.image-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 3rem 2rem;
+  animation: fadeIn 0.3s ease;
+  backdrop-filter: blur(5px);
+  overflow: hidden;
+  overscroll-behavior: contain;
+  touch-action: none;
+}
+
+.image-modal-content {
+  position: relative;
+  max-width: 85vw;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  animation: zoomIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  margin: auto;
+  pointer-events: auto;
+}
+
+.image-modal-img {
+  max-width: 100%;
+  max-height: 75vh;
+  width: auto;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  object-fit: contain;
+  display: block;
+}
+
+.image-modal-caption {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 1rem 2rem;
+  background: rgba(139, 95, 191, 0.9);
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(139, 95, 191, 0.3);
+}
+
+.image-modal-close {
+  position: absolute;
+  top: -60px;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background: rgba(139, 95, 191, 0.9);
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 300;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  backdrop-filter: blur(10px);
+}
+
+.image-modal-close:hover {
+  transform: rotate(90deg) scale(1.1);
+  background: rgba(212, 165, 212, 0.9);
+  box-shadow: 0 0 20px rgba(139, 95, 191, 0.5);
+}
+
+/* Cursor pointer nas imagens clicáveis */
+.gallery-item {
+  cursor: pointer;
+}
+
+/* Animações do Modal */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animação específica para mobile com posicionamento absoluto */
+@media (max-width: 768px) {
+  @keyframes zoomIn {
+    from {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+}
+
+/* Responsive - Modal de Imagem Tablet */
+@media (max-width: 1024px) {
+  .image-modal-overlay {
+    padding: 2rem 1.5rem;
+  }
+  
+  .image-modal-content {
+    max-width: 90vw;
+  }
+  
+  .image-modal-img {
+    max-height: 70vh;
+  }
+}
+
+/* Responsive - Modal de Imagem Mobile */
+@media (max-width: 768px) {
+  .image-modal-overlay {
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .image-modal-content {
+    max-width: 95vw;
+    gap: 1rem;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .image-modal-img {
+    max-height: 60vh;
+    max-width: 90vw;
+    border-radius: 8px;
+  }
+  
+  .image-modal-caption {
+    font-size: 0.9rem;
+    padding: 0.8rem 1.5rem;
+    max-width: 90vw;
+  }
+  
+  .image-modal-close {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
+    font-size: 1.5rem;
+    background: rgba(139, 95, 191, 0.95);
+    border-width: 1px;
+    z-index: 10000;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-modal-overlay {
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .image-modal-content {
+    max-width: 95vw;
+    gap: 0.75rem;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .image-modal-img {
+    max-height: 55vh;
+    max-width: 88vw;
+    border-radius: 6px;
+  }
+  
+  .image-modal-caption {
+    font-size: 0.8rem;
+    padding: 0.6rem 1rem;
+    line-height: 1.4;
+    max-width: 88vw;
+  }
+  
+  .image-modal-close {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    background: rgba(139, 95, 191, 0.95);
+    z-index: 10000;
   }
 }

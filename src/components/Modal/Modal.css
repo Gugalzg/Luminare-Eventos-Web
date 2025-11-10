@@ -214,6 +214,85 @@
 .modal-features {
   margin-bottom: 1.5rem;
 }
+
+/* Galeria de Imagens */
+.modal-gallery {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(139, 95, 191, 0.03), rgba(232, 184, 109, 0.03));
+  border-radius: 12px;
+  border: 1px solid rgba(139, 95, 191, 0.1);
+}
+
+.modal-gallery h4 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #8B5FBF;
+  font-weight: 600;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 1;
+  background: #f8f9ff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(139, 95, 191, 0.1);
+}
+
+.gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(139, 95, 191, 0.2);
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.gallery-item:hover .gallery-image {
+  transform: scale(1.05);
+}
+
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(139, 95, 191, 0.8), rgba(232, 184, 109, 0.8));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-icon {
+  font-size: 2rem;
+  color: white;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.modal-features {
+  margin-bottom: 1.5rem;
+}
 .modal-features h4 {
   font-size: 1.1rem;
   margin-bottom: 1rem;
@@ -886,6 +965,25 @@
     padding: 0.8rem 1rem;
     font-size: 0.9rem;
   }
+  
+  /* Galeria responsiva para mobile */
+  .modal-gallery {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+  
+  .gallery-item {
+    aspect-ratio: 1;
+  }
+  
+  .gallery-icon {
+    font-size: 1.5rem;
+  }
 }
 
 /* Para telas muito pequenas (320px e menos) */
@@ -930,6 +1028,26 @@
     padding: 0.7rem;
     font-size: 0.8rem;
     border-radius: 10px;
+  }
+  
+  /* Galeria para telas muito pequenas */
+  .modal-gallery {
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .modal-gallery h4 {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+  }
+  
+  .gallery-icon {
+    font-size: 1.2rem;
   }
   
   .features-list {

@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 44px 4% 0 4%; /* DESKTOP: mantém 80% */
+  padding: 44px 4% 0 4%;
   position: relative;
   background: linear-gradient(135deg, #f8f9ff 0%, #fff5f0 100%);
   overflow: hidden;
@@ -14,8 +14,8 @@
   content: '';
   position: absolute;
   top: -50%;
-  right: -8%; /* DESKTOP: mantém 80% */
-  width: 32%; /* DESKTOP: mantém 80% */
+  right: -8%;
+  width: 32%;
   height: 200%;
   background: radial-gradient(ellipse, rgba(139, 95, 191, 0.1) 0%, transparent 70%);
   animation: pulse 4s ease-in-out infinite;
@@ -41,7 +41,7 @@
 }
 
 .glow-orb.orb1 {
-  width: 160px; /* DESKTOP: mantém 80% */
+  width: 160px;
   height: 160px;
   top: 10%;
   left: 5%;
@@ -49,7 +49,7 @@
 }
 
 .glow-orb.orb2 {
-  width: 120px; /* DESKTOP: mantém 80% */
+  width: 120px;
   height: 120px;
   top: 60%;
   right: 10%;
@@ -58,7 +58,7 @@
 }
 
 .glow-orb.orb3 {
-  width: 80px; /* DESKTOP: mantém 80% */
+  width: 80px;
   height: 80px;
   bottom: 20%;
   left: 15%;
@@ -69,16 +69,16 @@
 .hero-content {
   flex: 1;
   top: 60%;
-  max-width: 480px; /* DESKTOP: mantém 80% */
+  max-width: 480px;
   z-index: 2;
   position: relative;
 }
 
 .hero h1 {
-  font-size: 2.8rem; /* DESKTOP: mantém 80% */
+  font-size: 2.8rem;
   font-weight: 700;
   line-height: 1.1;
-  margin-bottom: 1.2rem; /* DESKTOP: mantém 80% */
+  margin-bottom: 1.2rem;
   color: #2d1b4e;
   opacity: 0;
   animation: slideInUp 1s ease-out 0.2s forwards;
@@ -93,9 +93,9 @@
 }
 
 .hero p {
-  font-size: 1.04rem; /* DESKTOP: mantém 80% */
+  font-size: 1.04rem;
   color: #666;
-  margin-bottom: 2rem; /* DESKTOP: mantém 80% */
+  margin-bottom: 2rem;
   line-height: 1.6;
   opacity: 0;
   animation: slideInUp 1s ease-out 0.4s forwards;
@@ -103,7 +103,7 @@
 
 .hero-buttons {
   display: flex;
-  gap: 0.8rem; /* DESKTOP: mantém 80% */
+  gap: 0.8rem;
   flex-wrap: wrap;
   opacity: 0;
   animation: slideInUp 1s ease-out 0.6s forwards;
@@ -112,10 +112,10 @@
 .primary-btn {
   background: linear-gradient(135deg, #8B5FBF, #E8B86D);
   color: white;
-  padding: 0.8rem 2rem; /* DESKTOP: mantém 80% */
+  padding: 0.8rem 2rem;
   border: none;
-  border-radius: 40px; /* DESKTOP: mantém 80% */
-  font-size: 0.88rem; /* DESKTOP: mantém 80% */
+  border-radius: 40px;
+  font-size: 0.88rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -137,20 +137,20 @@
 }
 
 .primary-btn:hover {
-  transform: translateY(-2.4px); /* DESKTOP: mantém 80% */
+  transform: translateY(-2.4px);
   box-shadow: 0 12px 28px rgba(139, 95, 191, 0.4);
 }
 
 .primary-btn:hover::before {
-  width: 240px; /* DESKTOP: mantém 80% */
+  width: 240px;
   height: 240px;
 }
 
 .secondary-btn {
   background: transparent;
   color: #8B5FBF;
-  padding: 0.8rem 2rem; /* DESKTOP: mantém 80% */
-  border: 1.6px solid #8B5FBF; /* DESKTOP: mantém 80% */
+  padding: 0.8rem 2rem;
+  border: 1.6px solid #8B5FBF;
   border-radius: 40px;
   font-size: 0.88rem;
   font-weight: 600;
@@ -175,7 +175,7 @@
 
 .logo-container {
   position: relative;
-  width: 480px; /* DESKTOP: mantém 80% */
+  width: 480px;
   height: 480px;
   display: flex;
   align-items: center;
@@ -190,7 +190,7 @@
 }
 
 .floating-shape.shape1 {
-  width: 80px; /* DESKTOP: mantém 80% */
+  width: 80px;
   height: 80px;
   background: linear-gradient(135deg, #8B5FBF, #6B46C1);
   top: 10%;
@@ -200,7 +200,7 @@
 }
 
 .floating-shape.shape2 {
-  width: 64px; /* DESKTOP: mantém 80% */
+  width: 64px;
   height: 64px;
   background: linear-gradient(135deg, #E8B86D, #F59E0B);
   top: 20%;
@@ -210,7 +210,7 @@
 }
 
 .floating-shape.shape3 {
-  width: 48px; /* DESKTOP: mantém 80% */
+  width: 48px;
   height: 48px;
   background: linear-gradient(135deg, #8B5FBF, #E8B86D);
   bottom: 20%;
@@ -220,7 +220,7 @@
 }
 
 .floating-shape.shape4 {
-  width: 56px; /* DESKTOP: mantém 80% */
+  width: 56px;
   height: 56px;
   background: linear-gradient(135deg, #F59E0B, #8B5FBF);
   top: 80%;
@@ -230,7 +230,7 @@
 }
 
 .floating-shape.shape5 {
-  width: 72px; /* DESKTOP: mantém 80% */
+  width: 72px;
   height: 72px;
   background: linear-gradient(135deg, #6B46C1, #E8B86D);
   bottom: 40%;
@@ -248,14 +248,13 @@
 }
 
 .hero-logo-img {
-  height: 400px; /* DESKTOP: mantém 80% */
+  height: 400px;
   width: auto;
   object-fit: contain;
   filter: drop-shadow(0 8px 16px rgba(139, 95, 191, 0.3));
   animation: float 8s ease-in-out infinite;
 }
 
-/* MOBILE 100% (tamanhos originais) */
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
@@ -279,7 +278,6 @@
     margin-bottom: 1.5rem;
     font-weight: 800;
     text-shadow: 0 2px 10px rgba(139, 95, 191, 0.1);
-    /* Definir altura mínima para evitar mudanças de layout - aumentada para duas linhas */
     min-height: 240px;
     display: flex;
     flex-direction: column;
@@ -296,8 +294,8 @@
   }
 
   .hero p {
-    font-size: 1.2rem; /* MOBILE 100%: volta ao original (era 0.96rem) */
-    margin-bottom: 2.5rem; /* MOBILE 100%: volta ao original (era 2rem) */
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
     line-height: 1.7;
     color: #555;
     max-width: 90%;
@@ -307,18 +305,18 @@
   
   .hero-buttons {
     justify-content: center;
-    gap: 1rem; /* MOBILE 100%: volta ao original (era 0.8rem) */
-    margin-top: 1rem; /* MOBILE 100%: volta ao original (era 0.8rem) */
+    gap: 1rem;
+    margin-top: 1rem;
   }
   
   .primary-btn,
   .secondary-btn {
-    padding: 1rem 2.5rem; /* MOBILE 100%: volta ao original (era 0.8rem 2rem) */
-    font-size: 1.1rem; /* MOBILE 100%: volta ao original (era 0.88rem) */
-    min-width: 180px; /* MOBILE 100%: volta ao original (era 144px) */
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    min-width: 180px;
     font-weight: 700;
-    border-radius: 60px; /* MOBILE 100%: volta ao original (era 48px) */
-    box-shadow: 0 8px 25px rgba(139, 95, 191, 0.25); /* MOBILE 100%: volta ao original */
+    border-radius: 60px;
+    box-shadow: 0 8px 25px rgba(139, 95, 191, 0.25);
   }
   
   .primary-btn:active,
@@ -355,16 +353,16 @@
   .floating-shape.shape5 {
     display: none;
   }
-  
-  /* Manter apenas efeitos de fundo suaves no mobile - MOBILE 100% */
+
+  /* Manter apenas efeitos de fundo suaves no mobile */
   .hero::after {
-    width: 60%; /* MOBILE 100%: volta ao original (era 48%) */
+    width: 60%;
     height: 150%;
     opacity: 0.5;
   }
   
   .glow-orb.orb1 {
-    width: 150px; /* MOBILE 100%: volta ao original (era 120px) */
+    width: 150px;
     height: 150px;
     top: 5%;
     left: -5%;
@@ -372,7 +370,7 @@
   }
   
   .glow-orb.orb2 {
-    width: 120px; /* MOBILE 100%: volta ao original (era 96px) */
+    width: 120px;
     height: 120px;
     bottom: 10%;
     right: -5%;
@@ -380,7 +378,7 @@
   }
   
   .glow-orb.orb3 {
-    width: 80px; /* MOBILE 100%: volta ao original (era 64px) */
+    width: 80px;
     height: 80px;
     top: 50%;
     left: 80%;
@@ -388,7 +386,6 @@
   }
 }
 
-/* Para telas muito pequenas - MOBILE 100% */
 @media (max-width: 480px) {
   .hero {
     padding: 80px 3% 3rem 3%;
@@ -403,19 +400,17 @@
     font-size: 2.2rem;
     line-height: 1.2;
     margin-bottom: 1.2rem;
-    /* Ajustar altura mínima para telas menores - aumentada para duas linhas */
     min-height: 200px;
   }
   
-  /* Typewriter mais compacto em telas pequenas - MOBILE 100% */
   .hero h1 .typewriter-text {
     font-size: 0.95em;
     line-height: 1.2;
   }
   
   .hero p {
-    font-size: 1.1rem; /* MOBILE 100%: volta ao original (era 0.88rem) */
-    margin-bottom: 2rem; /* MOBILE 100%: volta ao original (era 1.6rem) */
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
     line-height: 1.6;
     max-width: 95%;
   }
@@ -423,16 +418,16 @@
   .hero-buttons {
     flex-direction: column;
     align-items: center;
-    gap: 0.8rem; /* MOBILE 100%: volta ao original (era 0.64rem) */
+    gap: 0.8rem;
     width: 100%;
   }
   
   .primary-btn,
   .secondary-btn {
-    padding: 0.9rem 2rem; /* MOBILE 100%: volta ao original (era 0.72rem 1.6rem) */
-    font-size: 1rem; /* MOBILE 100%: volta ao original (era 0.8rem) */
-    width: 85%; /* MOBILE 100%: volta ao original (era 68%) */
-    max-width: 280px; /* MOBILE 100%: volta ao original (era 224px) */
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+    width: 85%;
+    max-width: 280px;
     min-width: auto;
   }
   
@@ -447,22 +442,22 @@
   
   /* Ajustar efeitos de fundo para telas pequenas - MOBILE 100% */
   .hero::after {
-    width: 80%; /* MOBILE 100%: volta ao original (era 64%) */
+    width: 80%;
     opacity: 0.3;
   }
   
   .glow-orb.orb1 {
-    width: 100px; /* MOBILE 100%: volta ao original (era 80px) */
+    width: 100px;
     height: 100px;
   }
   
   .glow-orb.orb2 {
-    width: 80px; /* MOBILE 100%: volta ao original (era 64px) */
+    width: 80px;
     height: 80px;
   }
   
   .glow-orb.orb3 {
-    width: 60px; /* MOBILE 100%: volta ao original (era 48px) */
+    width: 60px;
     height: 60px;
   }
 }
@@ -475,7 +470,6 @@
   
   .hero h1 {
     font-size: 1.9rem;
-    /* Altura mínima ainda menor para telas muito pequenas - aumentada para duas linhas */
     min-height: 180px;
   }
   
@@ -487,15 +481,15 @@
 /* Tablet - DESKTOP 80% (mantém atual) */
 @media (max-width: 1024px) and (min-width: 769px) {
   .hero {
-    padding: 72px 3.2% 2.4rem 3.2%; /* DESKTOP 80%: mantém atual */
+    padding: 72px 3.2% 2.4rem 3.2%;
   }
   
   .hero h1 {
-    font-size: 2.4rem; /* DESKTOP 80%: mantém atual */
+    font-size: 2.4rem;
   }
   
   .hero p {
-    font-size: 0.96rem; /* DESKTOP 80%: mantém atual */
+    font-size: 0.96rem;
   }
   
   /* MOSTRAR LOGO NO TABLET */
@@ -504,7 +498,7 @@
   }
   
   .logo-container {
-    width: 360px; /* DESKTOP 80%: mantém atual */
+    width: 360px;
     height: 360px;
     display: flex;
   }
@@ -514,7 +508,7 @@
   }
   
   .hero-logo-img {
-    height: 280px; /* DESKTOP 80%: mantém atual */
+    height: 280px;
     display: block;
   }
   

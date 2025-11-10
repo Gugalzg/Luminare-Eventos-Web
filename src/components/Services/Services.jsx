@@ -6,6 +6,8 @@ function Services() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedService, setSelectedService] = useState(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [isImageModalOpen, setIsImageModalOpen] = useState(false);
   const sectionRef = useRef(null);
 
   // Efeito para mostrar todos os cards ao mesmo tempo
@@ -39,53 +41,15 @@ function Services() {
 
   const services = [
     {
-      icon: "🧩",
-      title: "Pegue e Monte",
-      desc: "Decorações personalizadas e práticas que você pode montar facilmente em casa, com tudo inclusivo para criar um ambiente incrível.",
-      fullDescription:
-        'Nosso serviço "Pegue e Monte" é perfeito para quem deseja uma festa linda sem complicações. Você recebe todo o material decorativo organizado e com instruções detalhadas para montar sua decoração em casa. É prático, econômico e você tem total controle sobre o processo.',
-      packages: {
-        start: {
-          name: "Pacote Start",
-          features: [
-            "Arco Redondo ou Romano",
-            "Três Cilindros",
-            "Pedestal de Balão (Máximo 2 cores)",
-            "Bandejas",
-            "Vasos com Arbusto",
-            "Capa Temática",
-          ],
-          pricing: "R$150,00",
-        },
-        prime: {
-          name: "Pacote Prime",
-          features: [
-            "Arco Redondo + Romano",
-            "Três Cilindros",
-            "Arco de Balões (Máximo 3 cores)",
-            "Tapete",
-            "Bandejas",
-            "Vasos com Arbusto",
-            "Capa Temática",
-          ],
-          pricing: "R$ 205,00",
-        },
-      },
-      features: [
-        "Kit completo de decoração temática",
-        "Instruções detalhadas de montagem",
-        "Material de qualidade premium",
-        "Flexibilidade para montar no seu tempo",
-        "Suporte via WhatsApp durante a montagem",
-        "Possibilidade de personalização das cores",
-      ],
-      pricing: "A partir de R$150,00",
-      priceNote: "Valor varia conforme pacote escolhido"
-    },
-      {
       icon: "🎉",
       title: "Mini Festa",
       desc: "Decoração completa para mesa de festa com arranjos, toalhas temáticas e acessórios coordenados.",
+      backgroundImage: "/images/services/mini-festa-bg.jpg",
+      images: [
+        { src: "/images/services/mini-festa-1.jpg", alt: "Mini Festa - Mesa Temática" },
+        { src: "/images/services/mini-festa-2.jpg", alt: "Mini Festa - Arranjos Decorativos" },
+        { src: "/images/services/mini-festa-3.jpg", alt: "Mini Festa - Detalhes da Decoração" }
+      ],
       fullDescription:
         'Transforme sua mesa em um verdadeiro cenário de festa! Nosso serviço de "Mini Festa" inclui toda a decoração necessária para criar uma mesa temática incrível, desde toalhas e arranjos até utensílios coordenados e elementos decorativos únicos.',
       features: [
@@ -94,13 +58,19 @@ function Services() {
         "Bandejas",
         "Vasos com Arbusto",
         "Capa Temática",
-      ],
-      pricing: "A partir de R$50,00",
+      ]
     },
     {
       icon: "🎂",
       title: "Kit Mêsversário",
       desc: "Kits completos para celebrar cada mês do seu bebê com decoração temática, painel e acessórios únicos.",
+      backgroundImage: "/images/services/mesversario-bg.jpg",
+      images: [
+        { src: "/images/services/mesversario-1.jpg", alt: "Kit Mêsversário - 1 mês" },
+        { src: "/images/services/mesversario-2.jpg", alt: "Kit Mêsversário - 6 meses" },
+        { src: "/images/services/mesversario-3.jpg", alt: "Kit Mêsversario - Setup Completo" },
+        { src: "/images/services/mesversario-4.jpg", alt: "Kit Mêsversario - Detalhes Personalizados" }
+      ],
       fullDescription:
         "Celebre cada mês de vida do seu bebê com nossos kits especiais de mêsversário. Cada kit é cuidadosamente preparado com decoração temática, painel personalizado e acessórios fotográficos para criar registros únicos de cada fase do crescimento.",
       features: [
@@ -110,13 +80,18 @@ function Services() {
         "Mini arco de balões (Máximo 2 cores)",
         "Bandejas",
         "Vasos com Arbusto",
-      ],
-      pricing: 'De<span class="price-original">R$550,00</span> por <span class="price-current">R$440,00</span>',
+      ]
     },
     {
       icon: "🎈",
       title: "Balão Bubble Personalizado",
       desc: "Balões transparentes personalizados com confetes, flores ou mensagens especiais para momentos únicos.",
+      backgroundImage: "/images/services/bubble-bg.jpg",
+      images: [
+        { src: "/images/services/bubble-1.jpg", alt: "Balão Bubble - Confetes Coloridos" },
+        { src: "/images/services/bubble-2.jpg", alt: "Balão Bubble - Flores Secas" },
+        { src: "/images/services/bubble-3.jpg", alt: "Balão Bubble - Personalizado" }
+      ],
       fullDescription:
         "Nossos balões bubble são a sensação do momento! Balões transparentes de alta qualidade preenchidos com confetes coloridos, flores secas, penas ou outros elementos decorativos. Perfeitos para pedidos de casamento, revelação de sexo, aniversários especiais e muito mais.",
       features: [
@@ -126,39 +101,55 @@ function Services() {
         "Fitas e acabamentos de luxo",
         "Entrega cuidadosa para manter a qualidade",
         "Opções de cores e temas variados",
-      ],
-      // pricing removido - serviço sem valor definido
-    },
-  
-        {
-      icon: "📷",
-      title: "Filtros para Instagram",
-      desc: "Filtros personalizados e molduras temáticas para suas fotos ficarem ainda mais especiais e marcantes nas redes sociais.",
-      fullDescription:
-        "Crie memórias digitais únicas com nossos filtros e molduras personalizadas para Instagram. Desenvolvemos conteúdo visual exclusivo que combina perfeitamente com o tema do seu evento, garantindo fotos incríveis e engajamento nas redes sociais.",
-      features: [
-        "Filtros exclusivos com o tema do evento",
-        "Molduras personalizadas com logos/nomes",
-        "Manual de uso dos filtros",
-      ],
-      // pricing removido - serviço sem valor definido
-    },
-    {
-      icon: "💌",
-      title: "Convites Digitais",
-      desc: "Convites digitais exclusivos, criativos e totalmente personalizados para transmitir a essência do seu evento e encantar seus convidados desde o primeiro contato.",
-      fullDescription:
-        "Crie convites digitais únicos que traduzem o estilo e o tema da sua celebração. Nossos designs exclusivos garantem um toque especial, despertando o entusiasmo dos convidados desde o primeiro contato.",
-      features: [
-        "Design exclusivo e personalizado",
-        "Opções para todos os estilos e ocasiões",
-        "Animações e elementos interativos opcionais",
-        "Personalização com nomes e detalhes do evento",
-        "Entrega rápida em formato digital"
-      ],
-      // pricing removido - serviço sem valor definido
+      ]
     }
 
+  ];
+
+  // Galeria com todas as categorias
+  const galleryCategories = [
+    {
+      id: 'festas-personalizadas',
+      title: 'Festas Personalizadas',
+      icon: '✨',
+      subtitle: 'Temas únicos criados especialmente para você',
+      images: [
+        { src: '/images/gallery/festas-personalizadas-1.jpg', alt: 'Festa Personalizada - Homem-Aranha' },
+        { src: '/images/gallery/festas-personalizadas-2.jpg', alt: 'Festa Personalizada - Chá de Bebê' },
+        { src: '/images/gallery/festas-personalizadas-3.jpg', alt: 'Festa Personalizada - Chá de Panela' },
+        { src: '/images/gallery/festas-personalizadas-4.jpg', alt: 'Festa Personalizada - Capivara' },
+        { src: '/images/gallery/festas-personalizadas-5.jpg', alt: 'Festa Personalizada - Stitch' },
+        { src: '/images/gallery/festas-personalizadas-6.jpg', alt: 'Festa Personalizada - Patrulha Canina' }
+      ]
+    },
+    {
+      id: 'mini-festa',
+      title: 'Mini Festa',
+      icon: '🎉',
+      subtitle: 'Decorações encantadoras para momentos especiais',
+      images: [
+        { src: '/images/gallery/mini-festa-1.jpg', alt: 'Mini Festa - Princesas' },
+        { src: '/images/gallery/mini-festa-2.jpg', alt: 'Mini Festa - Stitch' },
+        { src: '/images/gallery/mini-festa-3.jpg', alt: 'Mini Festa - Tetê' },
+        { src: '/images/gallery/mini-festa-4.jpg', alt: 'Mini Festa - Bosque' },
+        { src: '/images/gallery/mini-festa-5.jpg', alt: 'Mini Festa - Moana' },
+        { src: '/images/gallery/mini-festa-6.jpg', alt: 'Mini Festa - Turma da Mônica' }
+      ]
+    },
+    {
+      id: 'balao-bubble',
+      title: 'Balão Bubble',
+      icon: '🎈',
+      subtitle: 'Balões personalizados que encantam e emocionam',
+      images: [
+        { src: '/images/gallery/balao-bubble-1.jpg', alt: 'Balão Bubble' },
+        { src: '/images/gallery/balao-bubble-2.jpg', alt: 'Balão Bubble' },
+        { src: '/images/gallery/balao-bubble-3.jpg', alt: 'Balão Bubble' },
+        { src: '/images/gallery/balao-bubble-4.jpg', alt: 'Balão Bubble' },
+        { src: '/images/gallery/balao-bubble-5.jpg', alt: 'Balão Bubble' },
+        { src: '/images/gallery/balao-bubble-6.jpg', alt: 'Balão Bubble' }
+      ]
+    }
   ];
 
   const openModal = (service) => {
@@ -170,6 +161,35 @@ function Services() {
     setIsModalOpen(false);
     setSelectedService(null);
   };
+
+  const openImageModal = (image) => {
+    setSelectedImage(image);
+    setIsImageModalOpen(true);
+  };
+
+  const closeImageModal = () => {
+    setIsImageModalOpen(false);
+    setSelectedImage(null);
+  };
+
+  // Fechar modal de imagem com tecla ESC
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === 'Escape' && isImageModalOpen) {
+        closeImageModal();
+      }
+    };
+
+    if (isImageModalOpen) {
+      document.addEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'hidden';
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'unset';
+    };
+  }, [isImageModalOpen]);
 
   return (
     <section className="services" id="servicos" ref={sectionRef}>
@@ -187,42 +207,124 @@ function Services() {
             className={`service-card ${isVisible ? 'wave-visible' : ''}`}
             key={index}
             style={{
-              animationDelay: `${index * 0.1}s`
+              animationDelay: `${index * 0.1}s`,
+              backgroundImage: `url(${service.backgroundImage})`
             }}
           >
-            <div className="service-icon">
-              {service.icon}
+            <div className="service-card-overlay"></div>
+            <div className="service-card-content">
+              <div className="service-icon">
+                {service.icon}
+              </div>
+              <h3>{service.title}</h3>
+              <p>{service.desc}</p>
+              
+              
+              <button
+                className="service-btn"
+                onClick={() => openModal(service)}
+              >
+                Ver detalhes
+              </button>
             </div>
-            <h3>{service.title}</h3>
-            <p>{service.desc}</p>
-            
-            {/* Preço destacado para Pegue e Monte e Mini Festa */}
-            {(service.title === "Pegue e Monte" || service.title === "Mini Festa") && service.pricing && (
-              <div className="service-price">
-                <span className="service-price-value">{service.pricing}</span>
-              </div>
-            )}
-            {service.title === "Kit Mêsversário" && service.pricing && (
-              <div className="service-price">
-                <span className="service-price-value">A partir de R$440,00</span>
-              </div>
-            )}
-            <button
-              className="service-btn"
-              onClick={() => openModal(service)}
-            >
-              Ver detalhes
-            </button>
             <div className="card-glow"></div>
           </div>
         ))}
       </div>
 
+      {/* Galeria de Fotos - Todas as Categorias */}
+      <div className="services-gallery">
+        <div className="gallery-main-header">
+          <h3>
+            <span className="gallery-main-title">✨ Galeria de Momentos Especiais</span>
+            <span className="gallery-main-subtitle">Explore nossos trabalhos e se inspire para seu evento</span>
+          </h3>
+        </div>
+
+        {galleryCategories.map((category, categoryIndex) => (
+          <div key={category.id} className="gallery-category-section">
+            <div className="category-header">
+              <span className="category-icon">{category.icon}</span>
+              <div className="category-text">
+                <h4 className="category-title">{category.title}</h4>
+                <p className="category-subtitle">{category.subtitle}</p>
+              </div>
+            </div>
+
+            <div className="gallery-grid">
+              {category.images.map((image, index) => (
+                <div
+                  key={index}
+                  className="gallery-item"
+                  style={{
+                    animationDelay: `${index * 0.08}s`
+                  }}
+                  onClick={() => openImageModal(image)}
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="gallery-image"
+                    loading="lazy"
+                    onError={(e) => {
+                      const img = e.target;
+                      const parent = img?.parentElement;
+                      
+                      if (img && parent) {
+                        img.style.display = 'none';
+                        parent.style.background = 'linear-gradient(135deg, #f8f9ff, #e8e9ff)';
+                        parent.innerHTML = `
+                          <div style="
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            height: 100%;
+                            color: #8B5FBF;
+                            text-align: center;
+                            padding: 1rem;
+                          ">
+                            <div style="font-size: 2rem; margin-bottom: 0.5rem;">📷</div>
+                            <div style="font-size: 0.8rem; opacity: 0.7;">Foto em breve</div>
+                          </div>
+                        `;
+                      }
+                    }}
+                  />
+                  <div className="gallery-overlay">
+                    <div className="gallery-icon">🔍</div>
+                    <div className="gallery-caption">{image.alt}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Modal de Serviço */}
       <Modal
         isOpen={isModalOpen}
         onClose={closeModal}
         service={selectedService}
       />
+
+      {/* Modal de Imagem em Tela Cheia */}
+      {isImageModalOpen && selectedImage && (
+        <div className="image-modal-overlay" onClick={closeImageModal}>
+          <div className="image-modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="image-modal-close" onClick={closeImageModal} aria-label="Fechar">
+              ✕
+            </button>
+            <img
+              src={selectedImage.src}
+              alt={selectedImage.alt}
+              className="image-modal-img"
+            />
+            <div className="image-modal-caption">{selectedImage.alt}</div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

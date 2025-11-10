@@ -188,6 +188,30 @@ return (
         <p className="modal-description">
           {service.fullDescription}
         </p>
+
+        {/* Galeria de Imagens */}
+        {service.images && service.images.length > 0 && (
+          <div className="modal-gallery">
+            <h4>📸 Nossos Trabalhos</h4>
+            <div className="gallery-grid">
+              {service.images.map((image, index) => (
+                <div key={index} className="gallery-item">
+                  <img 
+                    src={image.src} 
+                    alt={image.alt} 
+                    className="gallery-image"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                    }}
+                  />
+                  <div className="gallery-overlay">
+                    <span className="gallery-icon">🔍</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
         
         {/* Botões de pacotes para "Pegue e Monte" */}
         {service.title === 'Pegue e Monte' && service.packages && (
