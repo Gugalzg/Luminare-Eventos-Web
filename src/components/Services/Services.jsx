@@ -43,15 +43,18 @@ function Services() {
 
   const services = [
     {
+      icon: "✨",
+      title: "Festas Personalizadas",
+      desc: "Decoração completa para mesa de festa com arranjos, toalhas temáticas e acessórios coordenados.",
+      backgroundImage: "/images/services/mini-festa-bg.jpg",
+      fullDescription:
+        'Transforme sua mesa em um verdadeiro cenário de festa! Nosso serviço de "Mini Festa" inclui toda a decoração necessária para criar uma mesa temática incrível, desde toalhas e arranjos até utensílios coordenados e elementos decorativos únicos.',
+    },
+    {
       icon: "🎉",
       title: "Mini Festa",
       desc: "Decoração completa para mesa de festa com arranjos, toalhas temáticas e acessórios coordenados.",
       backgroundImage: "/images/services/mini-festa-bg.jpg",
-      images: [
-        { src: "/images/services/mini-festa-1.jpg", alt: "Mini Festa - Mesa Temática" },
-        { src: "/images/services/mini-festa-2.jpg", alt: "Mini Festa - Arranjos Decorativos" },
-        { src: "/images/services/mini-festa-3.jpg", alt: "Mini Festa - Detalhes da Decoração" }
-      ],
       fullDescription:
         'Transforme sua mesa em um verdadeiro cenário de festa! Nosso serviço de "Mini Festa" inclui toda a decoração necessária para criar uma mesa temática incrível, desde toalhas e arranjos até utensílios coordenados e elementos decorativos únicos.',
       features: [
@@ -67,12 +70,6 @@ function Services() {
       title: "Kit Mêsversário",
       desc: "Kits completos para celebrar cada mês do seu bebê com decoração temática, painel e acessórios únicos.",
       backgroundImage: "/images/services/mesversario-bg.jpg",
-      images: [
-        { src: "/images/services/mesversario-1.jpg", alt: "Kit Mêsversário - 1 mês" },
-        { src: "/images/services/mesversario-2.jpg", alt: "Kit Mêsversário - 6 meses" },
-        { src: "/images/services/mesversario-3.jpg", alt: "Kit Mêsversario - Setup Completo" },
-        { src: "/images/services/mesversario-4.jpg", alt: "Kit Mêsversario - Detalhes Personalizados" }
-      ],
       fullDescription:
         "Celebre cada mês de vida do seu bebê com nossos kits especiais de mêsversário. Cada kit é cuidadosamente preparado com decoração temática, painel personalizado e acessórios fotográficos para criar registros únicos de cada fase do crescimento.",
       features: [
@@ -89,11 +86,6 @@ function Services() {
       title: "Balão Bubble Personalizado",
       desc: "Balões transparentes personalizados com confetes, flores ou mensagens especiais para momentos únicos.",
       backgroundImage: "/images/services/bubble-bg.jpg",
-      images: [
-        { src: "/images/services/bubble-1.jpg", alt: "Balão Bubble - Confetes Coloridos" },
-        { src: "/images/services/bubble-2.jpg", alt: "Balão Bubble - Flores Secas" },
-        { src: "/images/services/bubble-3.jpg", alt: "Balão Bubble - Personalizado" }
-      ],
       fullDescription:
         "Nossos balões bubble são a sensação do momento! Balões transparentes de alta qualidade preenchidos com confetes coloridos, flores secas, penas ou outros elementos decorativos. Perfeitos para pedidos de casamento, revelação de sexo, aniversários especiais e muito mais.",
       features: [
