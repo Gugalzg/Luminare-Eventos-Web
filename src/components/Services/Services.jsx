@@ -139,9 +139,9 @@ function Services() {
         { src: '/images/gallery/balao-bubble-1.jpg', alt: 'Balão Bubble' },
         { src: '/images/gallery/balao-bubble-2.jpg', alt: 'Balão Bubble' },
         { src: '/images/gallery/balao-bubble-3.jpg', alt: 'Balão Bubble' },
-        { src: '/images/gallery/balao-bubble-4.jpg', alt: 'Balão Bubble' },
-        { src: '/images/gallery/balao-bubble-5.jpg', alt: 'Balão Bubble' },
-        { src: '/images/gallery/balao-bubble-6.jpg', alt: 'Balão Bubble' }
+        { src: '/images/gallery/balao-bubble-4.jpeg', alt: 'Balão Bubble' },
+        { src: '/images/gallery/balao-bubble-5.jpeg', alt: 'Balão Bubble' },
+        { src: '/images/gallery/balao-bubble-6.jpeg', alt: 'Balão Bubble' }
       ]
     }
   ];
