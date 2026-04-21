@@ -1,9 +1,11 @@
 import './Header.css';
-import { openWhatsApp } from '../../utils/whatsapp';
+import { useNavigate } from 'react-router-dom';
 
 function Header() {
-  const handleWhatsAppClick = () => {
-    openWhatsApp('', 'header');
+  const navigate = useNavigate();
+
+  const handleOrcamentoClick = () => {
+    navigate('/cardapio');
   };
 
   const handleNavClick = (e) => {
@@ -36,8 +38,8 @@ function Header() {
         <a href="#contato" onClick={handleNavClick}>Contato</a>
       </nav>
       
-      <button className="cta-button" onClick={handleWhatsAppClick}>
-        <span>Solicitar Orçamento</span>
+      <button className="cta-button" onClick={handleOrcamentoClick}>
+        <span>Simular Festa</span>
       </button>
     </header>
   );

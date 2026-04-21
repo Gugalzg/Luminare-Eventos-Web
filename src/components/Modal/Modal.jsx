@@ -1,8 +1,10 @@
 import './Modal.css';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { openWhatsApp } from '../../utils/whatsapp';
 
 function Modal({ isOpen, onClose, service }) {
+  const navigate = useNavigate();
   const [activePackage, setActivePackage] = useState('start');
 
   useEffect(() => {
@@ -237,7 +239,17 @@ return (
       {/* CONDIÇÃO: Só mostra ações se NÃO for um dos serviços sem orçamento */}
       {!['Balão Bubble Personalizado', 'Filtros para Instagram', 'Convites Digitais'].includes(service.title) && (
         <div className="modal-actions">
-          <button className="modal-btn modal-btn-primary" onClick={handleWhatsAppClick}>
+          <button
+            className="modal-btn modal-btn-primary"
+            onClick={() => {
+              if (service.title === 'Pegue e Monte' && service.packages) {
+                handleWhatsAppClick();
+              } else {
+                onClose();
+                navigate('/cardapio');
+              }
+            }}
+          >
             {service.title === 'Pegue e Monte' && service.packages 
               ? `Quero o ${service.packages[activePackage].name}` 
               : 'Solicitar Orçamento'
