@@ -9,10 +9,11 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-router-dom": "^7.13.1",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-   "scripts": {
+  "scripts": {
     "start": "react-scripts start",
     "start-mobile": "HOST=0.0.0.0 react-scripts start",
     "build": "react-scripts build",
