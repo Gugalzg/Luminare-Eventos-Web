@@ -39,6 +39,7 @@ function Header() {
       </nav>
       
       <button className="cta-button" onClick={handleOrcamentoClick}>
+        <span className="btn-sparkle">✨</span>
         <span>Simular Festa</span>
       </button>
     </header>

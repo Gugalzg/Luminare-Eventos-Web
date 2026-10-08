@@ -1,8 +1,11 @@
 import './Hero.css';
+import { useNavigate } from 'react-router-dom';
 import { openWhatsApp } from '../../utils/whatsapp';
 import TypewriterText from './TypewriterText';
 
 function Hero() {
+  const navigate = useNavigate();
+
   const handleServicesClick = () => {
     const servicesSection = document.getElementById('servicos');
     servicesSection?.scrollIntoView({ behavior: 'smooth' });
@@ -10,6 +13,10 @@ function Hero() {
 
   const handleWhatsAppClick = () => {
     openWhatsApp('', 'hero');
+  };
+
+  const handleSimularFestaClick = () => {
+    navigate('/cardapio');
   };
 
   const typewriterTexts = [
@@ -38,8 +45,12 @@ function Hero() {
           <button className="primary-btn" onClick={handleServicesClick}>
             <span>Nossos Serviços</span>
           </button>
-          <button className="secondary-btn" onClick={handleWhatsAppClick}>
+          <button className="secondary-btn hero-btn-desktop" onClick={handleWhatsAppClick}>
             <span>Fale Conosco</span>
+          </button>
+          <button className="hero-btn-simular hero-btn-mobile" onClick={handleSimularFestaClick}>
+            <span className="btn-sparkle">✨</span>
+            <span>Simular Festa</span>
           </button>
         </div>
       </div>
